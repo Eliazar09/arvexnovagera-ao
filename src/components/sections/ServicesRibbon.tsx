@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
-const row1 = ['Sites', 'Sistemas Web', 'Automação', 'Boa Vista – RR'];
-const row2 = ['1–5 dias úteis', 'Design exclusivo', 'Mobile-first', 'SEO incluído', 'Suporte pós-entrega'];
+const row1 = ['Sitios Web', 'Sistemas Web', 'Automatización', 'América Latina'];
+const row2 = ['1–5 días hábiles', 'Diseño exclusivo', 'Mobile-first', 'SEO incluido', 'Soporte post-entrega'];
 
 function Ticker({
   items,

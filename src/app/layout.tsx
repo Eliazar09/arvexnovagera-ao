@@ -26,30 +26,30 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arvexagency.online"),
   title: {
-    default: "Criação de Sites e Automação em Boa Vista RR | Arvex Agency",
+    default: "Creación de Sitios Web y Automatización en América Latina | Arvex Agency",
     template: "%s | Arvex Agency",
   },
   description:
-    "Criação de sites profissionais, automação WhatsApp e sistemas web em Boa Vista, Roraima (RR). Projetos modernos entregues em poucos dias.",
+    "Creación de sitios web profesionales, automatización WhatsApp y sistemas web para toda América Latina. Proyectos modernos entregados en pocos días.",
   keywords: [
-    "criação de sites",
-    "automação WhatsApp",
+    "creación de sitios web",
+    "automatización WhatsApp",
     "sistemas web",
-    "Boa Vista RR",
-    "Roraima",
-    "agência de tecnologia",
-    "sites profissionais",
+    "América Latina",
+    "agencia de tecnología",
+    "sitios web profesionales",
+    "diseño web LATAM",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Arvex Agency — Sites, Sistemas e Automação",
+    title: "Arvex Agency — Sitios Web, Sistemas y Automatización",
     description:
-      "Sites profissionais, automação WhatsApp e sistemas web em Boa Vista RR.",
+      "Sitios web profesionales, automatización WhatsApp y sistemas web para toda América Latina.",
     url: "https://www.arvexagency.online",
     siteName: "Arvex Agency",
-    locale: "pt_BR",
+    locale: "es_419",
     type: "website",
     images: [
       {
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arvex Agency — Sites e Automação",
+    title: "Arvex Agency — Sitios Web y Automatización",
     description:
-      "Sites profissionais, automação WhatsApp e sistemas web em Boa Vista RR.",
+      "Sitios web profesionales, automatización WhatsApp y sistemas web para toda América Latina.",
     images: ["https://www.arvexagency.online/og"],
   },
 };
@@ -73,7 +73,7 @@ const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Arvex Agency',
-  description: 'Boutique de tecnologia em Boa Vista, Roraima. Sites profissionais, automação de WhatsApp e sistemas web.',
+  description: 'Boutique de tecnología. Sitios web profesionales, automatización de WhatsApp y sistemas web para América Latina.',
   url: 'https://www.arvexagency.online',
   telephone: '+55-95-9-8107-5842',
   email: 'arvexagency@outlook.com',
@@ -96,15 +96,15 @@ const schemaOrg = {
       closes: '18:00',
     },
   ],
-  priceRange: 'R$250–R$699/mês',
-  currenciesAccepted: 'BRL',
-  paymentAccepted: 'Pix, Cartão, Transferência',
+  priceRange: 'USD50–USD149/mes',
+  currenciesAccepted: 'USD',
+  paymentAccepted: 'Transferencia, Tarjeta, PayPal',
   areaServed: {
-    '@type': 'Country',
-    name: 'Brasil',
+    '@type': 'Place',
+    name: 'América Latina',
   },
   sameAs: [
-    'https://instagram.com/arvexbr',
+    'https://instagram.com/arvexagency',
     'https://linkedin.com/company/arvexbr',
   ],
 };
@@ -112,7 +112,7 @@ const schemaOrg = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      lang="pt-BR"
+      lang="es-419"
       className={`dark ${fraunces.variable} ${manrope.variable} ${jetbrains.variable}`}
     >
       <head>
@@ -126,7 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-red focus:text-paper focus:text-sm"
         >
-          Pular para conteúdo
+          Ir al contenido
         </a>
         {children}
       </body>

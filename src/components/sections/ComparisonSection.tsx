@@ -4,14 +4,14 @@ import { SplitReveal, Reveal } from '@/components/primitives/RevealText';
 type Val = 'yes' | 'no' | 'maybe';
 
 const rows: { label: string; arvex: Val; freelancer: Val; agencia: Val; template: Val }[] = [
-  { label: 'Design exclusivo',         arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'no'    },
-  { label: 'Código limpo e rápido',    arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'no'    },
-  { label: 'Prazo garantido',          arvex: 'yes', freelancer: 'no',    agencia: 'maybe', template: 'yes' },
-  { label: 'Suporte pós-entrega',      arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'no'    },
-  { label: 'Preço acessível',          arvex: 'yes', freelancer: 'yes',   agencia: 'no',  template: 'yes'   },
-  { label: 'SEO técnico incluído',     arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'no'    },
+  { label: 'Diseño exclusivo',         arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'no'    },
+  { label: 'Código limpio y rápido',   arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'no'    },
+  { label: 'Plazo garantizado',        arvex: 'yes', freelancer: 'no',    agencia: 'maybe', template: 'yes' },
+  { label: 'Soporte post-entrega',     arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'no'    },
+  { label: 'Precio accesible',         arvex: 'yes', freelancer: 'yes',   agencia: 'no',  template: 'yes'   },
+  { label: 'SEO técnico incluido',     arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'no'    },
   { label: 'Mobile-first',             arvex: 'yes', freelancer: 'maybe', agencia: 'yes', template: 'maybe' },
-  { label: 'Automação integrada',      arvex: 'yes', freelancer: 'no',    agencia: 'maybe', template: 'no'  },
+  { label: 'Automatización integrada', arvex: 'yes', freelancer: 'no',    agencia: 'maybe', template: 'no'  },
 ];
 
 function Icon({ val }: { val: Val }) {
@@ -26,7 +26,7 @@ export function ComparisonSection() {
       <div className="container">
         <div className="mb-16" id="comparison-title">
           <Reveal>
-            <p className="section-label mb-4">POR QUE A ARVEX</p>
+            <p className="section-label mb-4">POR QUÉ ARVEX</p>
           </Reveal>
           <SplitReveal
             text="Arvex vs."
@@ -48,15 +48,15 @@ export function ComparisonSection() {
 
         <Reveal delay={0.1}>
           <p className="font-mono text-[9px] uppercase tracking-widest text-paper-soft/30 mb-4 md:hidden flex items-center gap-2">
-            <span>←</span> deslize para ver tudo <span>→</span>
+            <span>←</span> deslizá para ver todo <span>→</span>
           </p>
           <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-            <table className="w-full min-w-[600px]" aria-label="Comparação entre Arvex e alternativas">
+            <table className="w-full min-w-[600px]" aria-label="Comparación entre Arvex y alternativas">
               {/* Header */}
               <thead>
                 <tr className="border-b border-white/[0.06]">
                   <th className="text-left pb-4 pr-8 font-mono text-[10px] uppercase tracking-widest text-paper-soft/40 w-[40%]">
-                    Critério
+                    Criterio
                   </th>
                   <th className="text-center pb-4 px-4 font-mono text-[10px] uppercase tracking-widest text-red">
                     Arvex
@@ -65,7 +65,7 @@ export function ComparisonSection() {
                     Freelancer
                   </th>
                   <th className="text-center pb-4 px-4 font-mono text-[10px] uppercase tracking-widest text-paper-soft/40">
-                    Agência trad.
+                    Agencia trad.
                   </th>
                   <th className="text-center pb-4 px-4 font-mono text-[10px] uppercase tracking-widest text-paper-soft/40">
                     Wix / Template
@@ -101,7 +101,7 @@ export function ComparisonSection() {
 
         <Reveal delay={0.2}>
           <p className="mt-6 font-mono text-[10px] uppercase tracking-widest text-paper-soft/25">
-            <Minus size={10} className="inline mr-1" /> pode variar conforme o profissional ou plataforma
+            <Minus size={10} className="inline mr-1" /> puede variar según el profesional o plataforma
           </p>
         </Reveal>
       </div>

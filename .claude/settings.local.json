@@ -32,7 +32,10 @@
       "PowerShell(Stop-Process -Id 12768 -Force -ErrorAction SilentlyContinue)",
       "Bash(start \"c:\\\\Users\\\\frank\\\\Desktop\\\\Sites\\\\Brasil\\\\novo site da arvex\\\\linktree\\\\index.html\")",
       "WebFetch(domain:www.arvexagency.online)",
-      "Bash(del \"c:\\\\Users\\\\frank\\\\Desktop\\\\Sites\\\\Brasil\\\\novo site da arvex\\\\src\\\\components\\\\primitives\\\\WhatsAppButton.tsx\")"
+      "Bash(del \"c:\\\\Users\\\\frank\\\\Desktop\\\\Sites\\\\Brasil\\\\novo site da arvex\\\\src\\\\components\\\\primitives\\\\WhatsAppButton.tsx\")",
+      "PowerShell(Start-Process \"http://localhost:3000\")",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(rm -rf .next)"
     ],
     "additionalDirectories": [
       "c:\\Users\\frank\\Desktop\\Sites\\Brasil\\novo site da arvex\\src\\app\\(marketing)\\projetos",

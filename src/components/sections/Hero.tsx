@@ -44,9 +44,9 @@ export function Hero() {
   return (
     <section
       className="relative min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-ink"
-      aria-label="Seção principal"
+      aria-label="Sección principal"
     >
-      {/* LineWaves — fundo WebGL */}
+      {/* LineWaves — fondo WebGL */}
       <div aria-hidden="true" className="absolute inset-0 z-0">
         <LineWaves
           speed={0.3}
@@ -77,26 +77,26 @@ export function Hero() {
 
         {/* ── Headline ── */}
         <h1 className="leading-[0.88] tracking-tight mb-4">
-          {/* SITES */}
+          {/* SITIOS */}
           <div
             className="flex flex-wrap gap-x-[0.15em] justify-center"
             style={{ fontSize: 'clamp(4.5rem, 14vw, 11rem)' }}
           >
             <HeroWord
-              word="SITES"
+              word="SITIOS"
               delay={0.2}
               className="font-display font-extrabold"
               style={{ color: '#e63946' }}
             />
           </div>
 
-          {/* AUTOMAÇÃO */}
+          {/* AUTOMATIZACIÓN */}
           <div
             className="flex flex-wrap gap-x-[0.15em] justify-center"
             style={{ fontSize: 'clamp(2.4rem, 6.5vw, 5.6rem)' }}
           >
             <HeroWord
-              word="AUTOMAÇÃO"
+              word="AUTOMATIZACIÓN"
               delay={0.3}
               className="font-display font-light"
               style={{ color: '#f5f3ee' }}
@@ -120,14 +120,14 @@ export function Hero() {
             />
           </div>
 
-          {/* que vendem. */}
+          {/* que venden. */}
           <div
             className="flex flex-wrap gap-x-[0.22em] mt-2 justify-center"
             style={{ fontSize: 'clamp(2rem, 5vw, 4.2rem)' }}
           >
             <HeroWord word="que" delay={0.5} className="font-display font-light text-paper" />
             <HeroWord
-              word="vendem."
+              word="venden."
               delay={0.58}
               className="font-display font-extrabold"
               style={{ color: '#e63946' }}
@@ -135,7 +135,7 @@ export function Hero() {
           </div>
         </h1>
 
-        {/* Linha de apoio */}
+        {/* Línea de apoyo */}
         <motion.div
           className="flex flex-wrap gap-x-[0.22em] justify-center mb-8"
           style={{ fontSize: 'clamp(1rem, 1.6vw, 1.2rem)' }}
@@ -143,7 +143,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.85, duration: 0.8 }}
         >
-          {['Construídos', 'com', 'cuidado', 'obsessivo.'].map((w, i) => (
+          {['Construidos', 'con', 'obsesión', 'por', 'el', 'detalle.'].map((w, i) => (
             <HeroWord
               key={w}
               word={w}
@@ -161,8 +161,8 @@ export function Hero() {
           className="font-display font-light text-paper-dim leading-relaxed mb-14 max-w-[44ch]"
           style={{ fontSize: 'clamp(1.05rem, 1.6vw, 1.3rem)' }}
         >
-          Sites profissionais, automação inteligente e sistemas web
-          entregados com padrão premium em Boa Vista — RR.
+          Sitios web profesionales, automatización inteligente y sistemas web
+          con estándar premium para toda América Latina.
         </motion.p>
 
         {/* CTAs */}
@@ -179,7 +179,7 @@ export function Hero() {
               style={{ boxShadow: '0 0 48px rgb(230 57 70 / 0.35), 0 4px 24px rgb(0 0 0 / 0.4)' }}
               data-cursor-label="agendar"
             >
-              Agendar conversa
+              Agendar una llamada
               <ArrowRight size={15} />
             </Link>
           </MagneticLink>
@@ -188,12 +188,12 @@ export function Hero() {
             href="/projetos"
             className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-paper-soft hover:text-paper transition-colors duration-300"
           >
-            Ver projetos
+            Ver proyectos
             <span className="block w-0 h-px bg-paper group-hover:w-8 transition-all duration-500" />
           </Link>
         </motion.div>
 
-        {/* Prova social — números */}
+        {/* Prueba social — números */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -201,9 +201,9 @@ export function Hero() {
           className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-10"
         >
           {[
-            { num: '+30',   label: 'projetos entregues' },
-            { num: '100%',  label: 'aprovação na entrega' },
-            { num: '1–5',   label: 'dias para ter seu site' },
+            { num: '+30',   label: 'proyectos entregados' },
+            { num: '100%',  label: 'aprobación en entrega' },
+            { num: '1–5',   label: 'días para tu sitio' },
           ].map(({ num, label }) => (
             <div key={label} className="flex items-center gap-2.5">
               <span className="font-display font-extrabold text-red text-xl leading-none">{num}</span>
@@ -222,7 +222,7 @@ export function Hero() {
         aria-hidden="true"
       >
         <div className="w-px h-10 bg-paper-soft/40" style={{ animation: 'scroll-pulse 2s ease-in-out infinite' }} />
-        <span className="section-label text-paper-soft/40 text-[9px]">ROLE</span>
+        <span className="section-label text-paper-soft/40 text-[9px]">SCROLL</span>
       </motion.div>
     </section>
   );

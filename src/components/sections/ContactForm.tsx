@@ -22,20 +22,20 @@ const schema = z.object({
   whatsappCode:   z.string(),
   whatsappNumber: z.string().min(8, 'Número inválido'),
   company:        z.string().optional(),
-  segment:        z.string().min(1,  'Selecione o segmento'),
+  segment:        z.string().min(1,  'Seleccioná el segmento'),
   hasSite:        z.enum(['sim', 'nao']),
   currentSiteUrl: z.string().optional(),
-  service:        z.string().min(1,  'Selecione um serviço'),
-  goal:           z.string().min(1,  'Selecione um objetivo'),
-  timeline:       z.string().min(1,  'Selecione um prazo'),
-  message:        z.string().min(10, 'Conte mais sobre o projeto (mínimo 10 caracteres)'),
+  service:        z.string().min(1,  'Seleccioná un servicio'),
+  goal:           z.string().min(1,  'Seleccioná un objetivo'),
+  timeline:       z.string().min(1,  'Seleccioná un plazo'),
+  message:        z.string().min(10, 'Contanos sobre el proyecto (mínimo 10 caracteres)'),
   contactMethod:  z.enum(['mensagem', 'meet']),
   meetDate:       z.string().optional(),
   meetTime:       z.string().optional(),
 }).superRefine((data, ctx) => {
   if (data.contactMethod === 'meet') {
-    if (!data.meetDate) ctx.addIssue({ code: 'custom', path: ['meetDate'], message: 'Selecione uma data' });
-    if (!data.meetTime) ctx.addIssue({ code: 'custom', path: ['meetTime'], message: 'Selecione um horário' });
+    if (!data.meetDate) ctx.addIssue({ code: 'custom', path: ['meetDate'], message: 'Seleccioná una fecha' });
+    if (!data.meetTime) ctx.addIssue({ code: 'custom', path: ['meetTime'], message: 'Seleccioná un horario' });
   }
 });
 
@@ -44,48 +44,48 @@ type FormData = z.infer<typeof schema>;
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const STEPS = [
-  { id: 'voce',      label: 'Você'         },
-  { id: 'empresa',   label: 'Empresa'      },
-  { id: 'servico',   label: 'Serviço'      },
-  { id: 'projeto',   label: 'Projeto'      },
-  { id: 'agenda',    label: 'Agendamento'  },
+  { id: 'voce',      label: 'Vos'           },
+  { id: 'empresa',   label: 'Empresa'       },
+  { id: 'servico',   label: 'Servicio'      },
+  { id: 'projeto',   label: 'Proyecto'      },
+  { id: 'agenda',    label: 'Agendamiento'  },
 ];
 
 const SEGMENTS = [
-  'Restaurante / Alimentação',
-  'Saúde / Clínica / Veterinário',
-  'Advocacia / Consultoria',
-  'Comércio / Loja',
-  'Educação / Cursos',
-  'Beleza / Estética',
-  'Imóveis / Construtora',
-  'Tecnologia / SaaS',
-  'Outro',
+  'Restaurante / Alimentación',
+  'Salud / Clínica / Veterinario',
+  'Abogacía / Consultoría',
+  'Comercio / Tienda',
+  'Educación / Cursos',
+  'Belleza / Estética',
+  'Inmuebles / Constructora',
+  'Tecnología / SaaS',
+  'Otro',
 ];
 
 const SERVICES = [
-  { id: 'manutencao',  label: 'Manutenção de Site',  price: 'R$ 250/mês', Icon: Wrench,          desc: 'Correções, atualizações e suporte no site existente'          },
-  { id: 'automacao',   label: 'Automação WhatsApp',  price: 'R$ 499/mês', Icon: Zap,             desc: 'Atendimento automático e fluxos inteligentes no WhatsApp'     },
-  { id: 'crm',         label: 'Automação + CRM',     price: 'R$ 699/mês', Icon: LayoutDashboard, desc: 'Automação completa com CRM, dashboard e gestão de clientes'   },
-  { id: 'site-novo',   label: 'Novo Site',           price: 'Sob consulta',Icon: Globe,          desc: 'Site profissional do zero, entregue em 1–5 dias úteis'        },
-  { id: 'sistema',     label: 'Sistema Web',         price: 'Sob consulta',Icon: Code2,          desc: 'Aplicação ou sistema sob medida para o seu negócio'           },
-  { id: 'outro',       label: 'Outro / Não sei',     price: 'Vamos ver',  Icon: HelpCircle,      desc: 'Me conta o que você precisa e encontramos a melhor solução'  },
+  { id: 'manutencao',  label: 'Mantenimiento de Sitio', price: 'USD 99/mes',      Icon: Wrench,          desc: 'Correcciones, actualizaciones y soporte en el sitio existente'     },
+  { id: 'automacao',   label: 'Automatización WhatsApp',price: 'USD 199/mes',     Icon: Zap,             desc: 'Atención automática y flujos inteligentes en WhatsApp'              },
+  { id: 'crm',         label: 'Automatización + CRM',   price: 'USD 299/mes',     Icon: LayoutDashboard, desc: 'Automatización completa con CRM, dashboard y gestión de clientes'   },
+  { id: 'site-novo',   label: 'Sitio nuevo',            price: 'A consultar',     Icon: Globe,           desc: 'Sitio profesional desde cero, entregado en 1–5 días hábiles'       },
+  { id: 'sistema',     label: 'Sistema Web',            price: 'A consultar',     Icon: Code2,           desc: 'Aplicación o sistema a medida para tu negocio'                      },
+  { id: 'outro',       label: 'Otro / No sé',           price: 'Lo vemos',        Icon: HelpCircle,      desc: 'Contanos qué necesitás y encontramos la mejor solución'             },
 ];
 
 const GOALS = [
-  'Atrair mais clientes online',
-  'Automatizar o atendimento',
-  'Organizar e gerenciar leads',
-  'Profissionalizar minha presença digital',
-  'Substituir site desatualizado',
-  'Lançar produto ou empresa',
+  'Atraer más clientes online',
+  'Automatizar la atención',
+  'Organizar y gestionar leads',
+  'Profesionalizar mi presencia digital',
+  'Reemplazar sitio desactualizado',
+  'Lanzar producto o empresa',
 ];
 
 const TIMELINES = [
-  { id: 'urgente',  label: 'Urgente',    sub: 'até 1 semana'   },
-  { id: 'breve',    label: 'Breve',      sub: '1–2 semanas'    },
-  { id: 'normal',   label: 'Normal',     sub: 'dentro de 1 mês' },
-  { id: 'flex',     label: 'Sem pressa', sub: '2+ meses'       },
+  { id: 'urgente',  label: 'Urgente',    sub: 'hasta 1 semana'   },
+  { id: 'breve',    label: 'Breve',      sub: '1–2 semanas'      },
+  { id: 'normal',   label: 'Normal',     sub: 'dentro de 1 mes'  },
+  { id: 'flex',     label: 'Sin apuro',  sub: '2+ meses'         },
 ];
 
 const TIME_SLOTS = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00'];
@@ -240,15 +240,15 @@ export function ContactForm() {
     }
 
     // 3. Build WhatsApp Text requesting the PDF attachment
-    const message = `*Novo Contato via Site* 🌐
+    const message = `*Nuevo Contacto vía Sitio* 🌐
 
-*Nome:* ${_data.name || 'Não informado'}
+*Nombre:* ${_data.name || 'No informado'}
 *WhatsApp:* ${_data.whatsappCode} ${_data.whatsappNumber}
-*Serviço:* ${_data.service}
+*Servicio:* ${_data.service}
 
-*Preferência de Retorno:* ${_data.contactMethod === 'meet' ? `Google Meet (${_data.meetDate} às ${_data.meetTime})` : 'Apenas Mensagem'}
+*Preferencia de Contacto:* ${_data.contactMethod === 'meet' ? `Google Meet (${_data.meetDate} a las ${_data.meetTime})` : 'Solo Mensaje'}
 
-_💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou enviando o arquivo PDF em anexo logo abaixo para darmos andamento._ 👇`;
+_💡 ¡Hola! Acabo de generar mi briefing detallado en PDF desde su sitio. Lo envío adjunto a continuación para que podamos avanzar._ 👇`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/5595981075842?text=${encodedMessage}`;
@@ -276,19 +276,19 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
         </div>
         <div>
           <h3 className="font-display text-3xl font-light text-paper mb-2">
-            {vals.contactMethod === 'meet' ? 'Reunião agendada.' : 'Mensagem recebida.'}
+            {vals.contactMethod === 'meet' ? 'Reunión agendada.' : 'Mensaje recibido.'}
           </h3>
           <p className="font-sans text-paper-dim leading-relaxed max-w-[42ch]">
             {vals.contactMethod === 'meet'
-              ? `Você escolheu ${vals.meetDate} às ${vals.meetTime}. Enviaremos o link do Google Meet para ${vals.email} e confirmaremos pelo WhatsApp.`
-              : `Entramos em contato em até 24 horas pelo email ${vals.email} ou pelo WhatsApp.`}
+              ? `Elegiste ${vals.meetDate} a las ${vals.meetTime}. Enviaremos el link de Google Meet a ${vals.email} y confirmaremos por WhatsApp.`
+              : `Te contactamos en hasta 24 horas por email ${vals.email} o por WhatsApp.`}
           </p>
         </div>
         <div className="border-t border-white/[0.06] pt-6">
           <p className="font-mono text-[10px] uppercase tracking-widest text-paper-soft/40">
-            Enquanto isso, veja nossos projetos →{' '}
+            Mientras tanto, mirá nuestros proyectos →{' '}
             <a href="/projetos" className="text-paper-soft hover:text-paper transition-colors">
-              /projetos
+              /proyectos
             </a>
           </p>
         </div>
@@ -347,15 +347,15 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               className="flex flex-col gap-8"
             >
               <div>
-                <p className="font-display text-xl font-light text-paper mb-1">Quem é você?</p>
-                <p className="font-sans text-sm text-paper-soft/50">Vamos nos apresentar primeiro.</p>
+                <p className="font-display text-xl font-light text-paper mb-1">¿Quién sos?</p>
+                <p className="font-sans text-sm text-paper-soft/50">Primero vamos a conocernos.</p>
               </div>
 
               <div className="flex flex-col gap-2">
-                <Label>Seu nome completo</Label>
+                <Label>Tu nombre completo</Label>
                 <TextInput
                   {...register('name')}
-                  placeholder="Como você se chama?"
+                  placeholder="¿Cómo te llamás?"
                   autoFocus
                   error={errors.name?.message}
                 />
@@ -427,7 +427,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                   )}
                 />
                 <p className="font-mono text-[9px] text-paper-soft/30 tracking-wide mt-1">
-                  Usamos só para confirmar reunião ou enviar proposta
+                  Solo lo usamos para confirmar la reunión o enviar la propuesta
                 </p>
               </div>
             </motion.div>
@@ -441,21 +441,21 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               className="flex flex-col gap-8"
             >
               <div>
-                <p className="font-display text-xl font-light text-paper mb-1">Sobre sua empresa</p>
-                <p className="font-sans text-sm text-paper-soft/50">Nos ajuda a entender o contexto.</p>
+                <p className="font-display text-xl font-light text-paper mb-1">Sobre tu empresa</p>
+                <p className="font-sans text-sm text-paper-soft/50">Nos ayuda a entender el contexto.</p>
               </div>
 
               <div className="flex flex-col gap-2">
-                <Label>Nome da empresa ou projeto</Label>
+                <Label>Nombre de la empresa o proyecto</Label>
                 <TextInput
                   {...register('company')}
-                  placeholder="Ex: Clínica Saúde Total, Loja Nova Store..."
+                  placeholder="Ej: Clínica Salud Total, Tienda Nova Store..."
                   error={errors.company?.message}
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <Label>Segmento / área de atuação *</Label>
+                <Label>Segmento / área de actividad *</Label>
                 <select
                   {...register('segment')}
                   className={cn(
@@ -464,7 +464,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                     errors.segment ? 'border-red/60' : 'border-white/15 focus:border-red'
                   )}
                 >
-                  <option value="" className="bg-ink-2">Selecione o segmento...</option>
+                  <option value="" className="bg-ink-2">Seleccioná el segmento...</option>
                   {SEGMENTS.map((s) => (
                     <option key={s} value={s} className="bg-ink-2">{s}</option>
                   ))}
@@ -473,7 +473,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               </div>
 
               <div className="flex flex-col gap-3">
-                <Label>Você já tem um site? *</Label>
+                <Label>¿Ya tenés un sitio? *</Label>
                 <div className="flex gap-3">
                   {(['sim', 'nao'] as const).map((v) => (
                     <Controller key={v} control={control} name="hasSite"
@@ -488,7 +488,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                               : 'border-white/10 text-paper-soft/50 hover:border-white/20'
                           )}
                         >
-                          {v === 'sim' ? 'Sim, tenho' : 'Não tenho'}
+                          {v === 'sim' ? 'Sí, tengo' : 'No tengo'}
                         </button>
                       )}
                     />
@@ -504,15 +504,15 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-2"
                 >
-                  <Label>URL do site atual</Label>
+                  <Label>URL del sitio actual</Label>
                   <TextInput
                     {...register('currentSiteUrl')}
                     type="url"
-                    placeholder="https://seusite.com.br"
+                    placeholder="https://tusitio.com"
                     error={errors.currentSiteUrl?.message}
                   />
                   <p className="font-mono text-[9px] text-paper-soft/30 tracking-wide">
-                    Opcional — mas ajuda muito na análise
+                    Opcional — pero ayuda mucho en el análisis
                   </p>
                 </motion.div>
               )}
@@ -527,8 +527,8 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               className="flex flex-col gap-6"
             >
               <div>
-                <p className="font-display text-xl font-light text-paper mb-1">O que você precisa?</p>
-                <p className="font-sans text-sm text-paper-soft/50">Selecione o serviço mais próximo do seu objetivo.</p>
+                <p className="font-display text-xl font-light text-paper mb-1">¿Qué necesitás?</p>
+                <p className="font-sans text-sm text-paper-soft/50">Seleccioná el servicio más cercano a tu objetivo.</p>
               </div>
 
               <Controller control={control} name="service"
@@ -583,12 +583,12 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               className="flex flex-col gap-8"
             >
               <div>
-                <p className="font-display text-xl font-light text-paper mb-1">Sobre o projeto</p>
-                <p className="font-sans text-sm text-paper-soft/50">Quanto mais detalhe, melhor a proposta.</p>
+                <p className="font-display text-xl font-light text-paper mb-1">Sobre el proyecto</p>
+                <p className="font-sans text-sm text-paper-soft/50">Cuanto más detalle, mejor la propuesta.</p>
               </div>
 
               <div className="flex flex-col gap-3">
-                <Label>Qual é o principal objetivo? *</Label>
+                <Label>¿Cuál es el objetivo principal? *</Label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <Controller control={control} name="goal"
                     render={({ field }) => (
@@ -611,7 +611,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               </div>
 
               <div className="flex flex-col gap-3">
-                <Label>Qual o prazo ideal? *</Label>
+                <Label>¿Cuál es el plazo ideal? *</Label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   <Controller control={control} name="timeline"
                     render={({ field }) => (
@@ -648,11 +648,11 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               </div>
 
               <div className="flex flex-col gap-2">
-                <Label>Descreva o projeto *</Label>
+                <Label>Describí el proyecto *</Label>
                 <textarea
                   {...register('message')}
                   rows={4}
-                  placeholder="O que você quer construir? Qual problema isso resolve? Tem alguma referência de site ou app que admira?"
+                  placeholder="¿Qué querés construir? ¿Qué problema resuelve? ¿Tenés alguna referencia de sitio o app que te guste?"
                   className={cn(
                     'w-full bg-transparent border-b py-3 font-sans text-base text-paper placeholder:text-paper-soft/30 resize-none',
                     'focus:outline-none transition-colors duration-300',
@@ -672,8 +672,8 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               className="flex flex-col gap-8"
             >
               <div>
-                <p className="font-display text-xl font-light text-paper mb-1">Como prefere continuar?</p>
-                <p className="font-sans text-sm text-paper-soft/50">Escolha como quer receber o retorno.</p>
+                <p className="font-display text-xl font-light text-paper mb-1">¿Cómo preferís continuar?</p>
+                <p className="font-sans text-sm text-paper-soft/50">Elegí cómo querés que te contactemos.</p>
               </div>
 
               <Controller control={control} name="contactMethod"
@@ -693,11 +693,11 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                       <div className="flex items-center gap-2">
                         <MessageSquare size={16} className={field.value === 'mensagem' ? 'text-red' : 'text-paper-soft/40'} />
                         <span className="font-mono text-[11px] uppercase tracking-widest text-paper">
-                          Só enviar mensagem
+                          Solo enviar mensaje
                         </span>
                       </div>
                       <p className="font-sans text-xs text-paper-dim leading-relaxed">
-                        Respondemos em até 24h com uma análise inicial e proposta.
+                        Respondemos en hasta 24h con un análisis inicial y propuesta.
                       </p>
                     </button>
 
@@ -719,7 +719,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                         </span>
                       </div>
                       <p className="font-sans text-xs text-paper-dim leading-relaxed">
-                        30 min de videochamada para entender o projeto e já sair com uma direção clara.
+                        30 min de videollamada para entender el proyecto y salir con una dirección clara.
                       </p>
                     </button>
                   </div>
@@ -735,7 +735,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                   className="flex flex-col gap-6 border border-white/[0.06] p-5"
                 >
                   <div className="flex flex-col gap-2">
-                    <Label>Data da reunião *</Label>
+                    <Label>Fecha de la reunión *</Label>
                     <Controller control={control} name="meetDate"
                       render={({ field }) => (
                         <input
@@ -756,7 +756,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                   </div>
 
                   <div className="flex flex-col gap-3">
-                    <Label>Horário *</Label>
+                    <Label>Horario *</Label>
                     <Controller control={control} name="meetTime"
                       render={({ field }) => (
                         <div className="flex flex-wrap gap-2">
@@ -780,7 +780,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
                     />
                     <FieldError message={errors.meetTime?.message} />
                     <p className="font-mono text-[9px] text-paper-soft/30 tracking-wide">
-                      Horário de Boa Vista–RR (UTC–4) · Seg–Sex apenas
+                      Horario de América Latina (UTC–5) · Lun–Vie únicamente
                     </p>
                   </div>
                 </motion.div>
@@ -797,7 +797,7 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               onClick={() => go(step - 1)}
               className="font-mono text-[11px] uppercase tracking-widest text-paper-soft/50 hover:text-paper transition-colors"
             >
-              ← Voltar
+              ← Volver
             </button>
           ) : <span />}
 
@@ -819,9 +819,9 @@ _💡 Olá, acabei de gerar meu briefing detalhado em PDF pelo seu site! Estou e
               {loading ? (
                 <><Loader2 size={13} className="animate-spin" /> Enviando...</>
               ) : contactMethod === 'meet' ? (
-                'Confirmar reunião →'
+                'Confirmar reunión →'
               ) : (
-                'Enviar mensagem →'
+                'Enviar mensaje →'
               )}
             </button>
           )}

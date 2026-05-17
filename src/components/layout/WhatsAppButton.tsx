@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
-const HREF = 'https://wa.me/5595981075842?text=' + encodeURIComponent('Olá! Vim pelo site e quero saber mais sobre os serviços da Arvex.');
+const HREF = 'https://wa.me/5595981075842?text=' + encodeURIComponent('¡Hola! Vine desde el sitio y quiero saber más sobre los servicios de Arvex.');
 
 export function WhatsAppButton() {
   const [visible, setVisible] = useState(false);
@@ -22,7 +22,7 @@ export function WhatsAppButton() {
           href={HREF}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Falar no WhatsApp"
+          aria-label="Hablar por WhatsApp"
           initial={{ opacity: 0, scale: 0.7, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.7, y: 16 }}
@@ -33,12 +33,11 @@ export function WhatsAppButton() {
         >
           {/* Label hover */}
           <span className="hidden md:block font-mono text-[10px] uppercase tracking-widest text-paper bg-ink-2 border border-white/[0.08] px-3 py-2 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
-            Falar agora
+            Hablar ahora
           </span>
 
-          {/* Botão */}
+          {/* Botón */}
           <div className="relative w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_4px_24px_rgb(37_211_102_/_0.35)]">
-            {/* Pulse — CSS puro, sem GSAP */}
             <span
               className="absolute inset-0 rounded-full bg-[#25D366]"
               style={{ animation: 'wa-pulse 2.2s ease-out infinite' }}

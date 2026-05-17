@@ -77,7 +77,7 @@ function ServiceRow({ service, index }: { service: typeof services[0]; index: nu
               href={`/servicos/${service.slug}`}
               className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-red group"
             >
-              Ver detalhes
+              Ver detalles
               <ArrowRight size={12} className="group-hover:translate-x-1.5 transition-transform duration-300" />
             </Link>
           </motion.div>
@@ -94,10 +94,10 @@ export function ServicesGrid() {
       <div className="section border-b border-white/[0.06]">
         <div className="container">
           <Reveal>
-            <p className="section-label mb-4">O QUE FAZEMOS</p>
+            <p className="section-label mb-4">QUÉ HACEMOS</p>
           </Reveal>
           <div id="services-title">
-            {['Três', 'serviços.', 'Uma', 'equipe.'].map((word, i) => (
+            {['Tres', 'servicios.', 'Un', 'equipo.'].map((word, i) => (
               <SplitReveal
                 key={word}
                 text={word}

@@ -19,21 +19,21 @@ export default function NotFound() {
         </div>
 
         <h1 className="font-display text-4xl md:text-6xl font-light text-paper mb-4">
-          Fora do{' '}
+          Fuera del{' '}
           <em className="italic" style={{ fontVariationSettings: '"SOFT" 100' }}>
             mapa.
           </em>
         </h1>
 
         <p className="font-sans text-paper-dim mb-10 max-w-[40ch]">
-          A página que você está procurando não existe ou foi movida para outro endereço.
+          La página que buscas no existe o fue movida a otra dirección.
         </p>
 
         <Link
           href="/"
           className="inline-flex items-center gap-3 font-mono text-sm uppercase tracking-widest bg-red text-paper px-8 py-4 hover:bg-red-deep transition-colors duration-300"
         >
-          Voltar à base →
+          Volver al inicio →
         </Link>
       </div>
     </div>

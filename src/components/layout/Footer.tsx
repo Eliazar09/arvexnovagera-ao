@@ -2,15 +2,15 @@ import Link from 'next/link';
 import { LocalClock } from '@/components/primitives/LocalClock';
 
 const serviceLinks = [
-  { href: '/servicos/sites', label: 'Sites' },
+  { href: '/servicos/sites', label: 'Sitios Web' },
   { href: '/servicos/sistemas', label: 'Sistemas Web' },
-  { href: '/servicos/automacao', label: 'Automação' },
+  { href: '/servicos/automacao', label: 'Automatización' },
 ];
 
 const agencyLinks = [
-  { href: '/projetos', label: 'Projetos' },
-  { href: '/contato', label: 'Contato' },
-  { href: '/contato#orcamento', label: 'Solicitar orçamento' },
+  { href: '/projetos', label: 'Proyectos' },
+  { href: '/contato', label: 'Contacto' },
+  { href: '/contato#orcamento', label: 'Solicitar presupuesto' },
 ];
 
 const WA_URL = 'https://wa.me/5595981075842';
@@ -29,13 +29,13 @@ export function Footer() {
               Arvex<span className="text-red">.</span>
             </Link>
             <p className="font-sans text-sm text-paper-soft leading-relaxed max-w-[28ch]">
-              Boutique de tecnologia e criação. Sites, sistemas e automação que geram resultado.
+              Boutique de tecnología y creación. Sitios web, sistemas y automatización que generan resultados.
             </p>
           </div>
 
-          {/* Serviços */}
+          {/* Servicios */}
           <div>
-            <p className="section-label mb-6">Serviços</p>
+            <p className="section-label mb-6">Servicios</p>
             <ul className="flex flex-col gap-3">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
@@ -50,9 +50,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Agência */}
+          {/* Agencia */}
           <div>
-            <p className="section-label mb-6">Agência</p>
+            <p className="section-label mb-6">Agencia</p>
             <ul className="flex flex-col gap-3">
               {agencyLinks.map((link) => (
                 <li key={link.href}>
@@ -67,9 +67,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contato */}
+          {/* Contacto */}
           <div>
-            <p className="section-label mb-6">Contato</p>
+            <p className="section-label mb-6">Contacto</p>
             <div className="flex flex-col gap-3">
               <a
                 href={WA_URL}
@@ -132,7 +132,7 @@ export function Footer() {
             <LocalClock className="font-mono text-xs text-paper-soft/40 uppercase tracking-wider" />
           </div>
           <span className="font-mono text-xs text-paper-soft/30 uppercase tracking-wider">
-            Boa Vista–RR, Brasil
+            América Latina
           </span>
         </div>
 

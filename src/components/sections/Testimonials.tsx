@@ -22,7 +22,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
       </p>
 
       {/* Rating — 5 traços */}
-      <div className="flex gap-1.5" aria-label={`Avaliação: ${t.rating} de 5`}>
+      <div className="flex gap-1.5" aria-label={`Valoración: ${t.rating} de 5`}>
         {Array.from({ length: 5 }).map((_, i) => (
           <span
             key={i}
@@ -64,7 +64,7 @@ export function Testimonials() {
     <section className="section border-b border-white/[0.06] overflow-hidden" aria-labelledby="testimonials-title">
       <div className="container mb-12">
         <Reveal>
-          <p className="section-label mb-4">06 / O QUE DIZEM</p>
+          <p className="section-label mb-4">06 / LO QUE DICEN</p>
         </Reveal>
         <Reveal delay={0.1}>
           <h2
@@ -72,14 +72,14 @@ export function Testimonials() {
             id="testimonials-title"
             style={{ fontSize: 'var(--fs-h2)' }}
           >
-            Quem investiu,
+            Quienes invirtieron,
             <br />
-            <em className="italic text-paper-dim">viu resultado.</em>
+            <em className="italic text-paper-dim">vieron resultados.</em>
           </h2>
         </Reveal>
         <Reveal delay={0.18}>
           <p className="font-sans text-paper-dim mt-4 max-w-[48ch]" style={{ fontSize: 'var(--fs-lead)' }}>
-            Resultados reais de clientes de Boa Vista e do Brasil.
+            Resultados reales de clientes de toda América Latina.
           </p>
         </Reveal>
       </div>

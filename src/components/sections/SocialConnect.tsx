@@ -6,7 +6,7 @@ const WA_URL = 'https://wa.me/5595981075842';
 
 export function SocialConnect() {
   return (
-    <section className="section border-b border-white/[0.06] overflow-hidden" aria-label="Redes sociais">
+    <section className="section border-b border-white/[0.06] overflow-hidden" aria-label="Redes sociales">
       {/* Faint red glow background */}
       <div
         aria-hidden="true"
@@ -16,7 +16,7 @@ export function SocialConnect() {
 
       <div className="container relative z-10 text-center">
         <Reveal>
-          <p className="section-label mb-6">NOS SIGA</p>
+          <p className="section-label mb-6">SEGUINOS</p>
         </Reveal>
 
         <Reveal delay={0.08}>
@@ -24,7 +24,7 @@ export function SocialConnect() {
             className="font-display font-light leading-tight mb-4"
             style={{ fontSize: 'var(--fs-h2)' }}
           >
-            Conecte-se com a{' '}
+            Conectate con{' '}
             <span
               style={{
                 background: 'linear-gradient(135deg, #e83946 0%, #a855f7 100%)',
@@ -40,7 +40,7 @@ export function SocialConnect() {
 
         <Reveal delay={0.14}>
           <p className="font-sans text-paper-dim max-w-[40ch] mx-auto mb-12">
-            Acompanhe nosso trabalho, bastidores e novidades nas redes sociais.
+            Seguí nuestro trabajo, detrás de cámaras y novedades en redes sociales.
           </p>
         </Reveal>
 
@@ -51,7 +51,7 @@ export function SocialConnect() {
               href="https://www.instagram.com/arvexagency/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram da Arvex Agency"
+              aria-label="Instagram de Arvex Agency"
               className="w-16 h-16 rounded-full flex items-center justify-center hover:bg-white/[0.06] transition-colors duration-200 group"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-paper-soft group-hover:text-paper transition-colors" aria-hidden="true">
@@ -66,7 +66,7 @@ export function SocialConnect() {
               href="https://www.facebook.com/profile.php?id=61577662511296"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook da Arvex Agency"
+              aria-label="Facebook de Arvex Agency"
               className="w-16 h-16 rounded-full flex items-center justify-center hover:bg-white/[0.06] transition-colors duration-200 group"
             >
               <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" className="text-paper-soft group-hover:text-paper transition-colors" aria-hidden="true">
@@ -79,7 +79,7 @@ export function SocialConnect() {
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="WhatsApp da Arvex Agency"
+              aria-label="WhatsApp de Arvex Agency"
               className="w-16 h-16 rounded-full flex items-center justify-center hover:bg-[#25D366]/10 transition-colors duration-200 group"
             >
               <svg width="28" height="28" viewBox="0 0 32 32" fill="currentColor" className="text-paper-soft group-hover:text-[#25D366] transition-colors" aria-hidden="true">

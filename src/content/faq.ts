@@ -7,50 +7,50 @@ export type FaqItem = {
 export const faq: FaqItem[] = [
   {
     id: '1',
-    question: 'Qual é o prazo médio de entrega?',
+    question: '¿Cuál es el plazo promedio de entrega?',
     answer:
-      'Depende do escopo. Sites simples: 7–12 dias. Sites complexos com CMS: 18–28 dias. Automações: 5–15 dias. E-commerce completo: 25–40 dias. Identidade visual: 10–18 dias. Passamos um prazo preciso após o briefing.',
+      'Depende del alcance. Sitios simples: 7–12 días. Sitios complejos con CMS: 18–28 días. Automatizaciones: 5–15 días. E-commerce completo: 25–40 días. Identidad visual: 10–18 días. Damos un plazo preciso después del briefing.',
   },
   {
     id: '2',
-    question: 'Como funciona o processo de pagamento?',
+    question: '¿Cómo funciona el proceso de pago?',
     answer:
-      'Trabalhamos com 50% de entrada antes de começar e 50% na entrega. Em projetos acima de R$10k, parcelamos em até 3 vezes sem juros via PIX ou cartão.',
+      'Trabajamos con 50% de adelanto antes de empezar y 50% en la entrega. En proyectos grandes, conversamos las condiciones.',
   },
   {
     id: '3',
-    question: 'Preciso assinar contrato?',
+    question: '¿Necesito firmar un contrato?',
     answer:
-      'Sim. Antes de qualquer trabalho, assinamos um contrato que especifica escopo, prazo, forma de pagamento e direitos sobre o entregável. É proteção para os dois lados.',
+      'Sí. Antes de cualquier trabajo, firmamos un contrato que especifica el alcance, plazo, forma de pago y derechos sobre el entregable. Es protección para ambas partes.',
   },
   {
     id: '4',
-    question: 'O código do site fica comigo?',
+    question: '¿El código del sitio es mío?',
     answer:
-      'Sempre. Ao concluir o projeto, você recebe o repositório completo no GitHub, sem dependências proprietárias ou lock-in de plataforma. O código é seu.',
+      'Siempre. Al finalizar el proyecto, recibes el repositorio completo en GitHub, sin dependencias propietarias ni lock-in de plataforma. El código es tuyo.',
   },
   {
     id: '5',
-    question: 'Vocês usam inteligência artificial nos projetos?',
+    question: '¿Usan inteligencia artificial en los proyectos?',
     answer:
-      'Usamos IA como ferramenta de produtividade — para pesquisa, geração de variações e otimização. O design, a estratégia e o código são revisados e construídos por humanos. IA acelera, não substitui julgamento.',
+      'Usamos IA como herramienta de productividad — para investigación, generación de variaciones y optimización. El diseño, la estrategia y el código son revisados y construidos por personas. La IA acelera, no reemplaza el criterio.',
   },
   {
     id: '6',
-    question: 'E o suporte após a entrega?',
+    question: '¿Y el soporte después de la entrega?',
     answer:
-      'Todos os projetos incluem suporte técnico por 30 a 60 dias após a entrega, dependendo do plano. Bugs e ajustes dentro do escopo acordado são corrigidos sem custo adicional.',
+      'Todos los proyectos incluyen soporte técnico por 30 a 60 días después de la entrega, según el plan. Bugs y ajustes dentro del alcance acordado se resuelven sin costo adicional.',
   },
   {
     id: '7',
-    question: 'Atendem clientes fora de Boa Vista ou do Brasil?',
+    question: '¿Atienden clientes fuera de Brasil?',
     answer:
-      'Sim. A maioria dos nossos projetos é conduzida 100% online. Atendemos todo o Brasil e América Latina. Trabalhamos em português, inglês e espanhol.',
+      'Sí. La mayoría de nuestros proyectos se conduce 100% online. Atendemos toda América Latina. Trabajamos en español, portugués e inglés.',
   },
   {
     id: '8',
-    question: 'Quanto custa um projeto?',
+    question: '¿Cuánto cuesta un proyecto?',
     answer:
-      'O investimento varia de acordo com o escopo, complexidade e prazo de cada projeto. Conversamos sobre valores na call de briefing — agende gratuitamente e sem compromisso.',
+      'La inversión varía según el alcance, complejidad y plazo de cada proyecto. Lo conversamos en la llamada de briefing — agenda gratis y sin compromiso.',
   },
 ];

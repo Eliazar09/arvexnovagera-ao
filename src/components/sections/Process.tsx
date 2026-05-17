@@ -3,23 +3,23 @@ import { Reveal } from '@/components/primitives/RevealText';
 const steps = [
   {
     number: '01',
-    title: 'Descobrir',
-    description: 'Briefing detalhado, alinhamento de escopo e pesquisa. Entendemos o seu negócio antes de escrever uma linha de código.',
-    duration: '~ 1 dia',
+    title: 'Descubrir',
+    description: 'Briefing detallado, alineación de alcance e investigación. Entendemos tu negocio antes de escribir una línea de código.',
+    duration: '~ 1 día',
     align: 'left',
   },
   {
     number: '02',
     title: 'Construir',
-    description: 'Design, desenvolvimento e testes. Você acompanha o progresso em tempo real e aprova cada etapa.',
-    duration: '~ 3 dias',
+    description: 'Diseño, desarrollo y pruebas. Seguís el progreso en tiempo real y aprobás cada etapa.',
+    duration: '~ 3 días',
     align: 'right',
   },
   {
     number: '03',
-    title: 'Lançar',
-    description: 'Deploy, verificação de segurança, correção de bugs e pré-visualização para aprovação final. Só vai ao ar quando estiver perfeito.',
-    duration: '~ 1 dia',
+    title: 'Lanzar',
+    description: 'Deploy, verificación de seguridad, corrección de bugs y previsualización para aprobación final. Solo sale cuando está perfecto.',
+    duration: '~ 1 día',
     align: 'left',
   },
 ];
@@ -30,7 +30,7 @@ export function Process() {
       <div className="container">
         <div className="mb-16">
           <Reveal>
-            <p className="section-label mb-4">05 / PROCESSO</p>
+            <p className="section-label mb-4">05 / PROCESO</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2
@@ -38,7 +38,7 @@ export function Process() {
               id="process-title"
               style={{ fontSize: 'var(--fs-h2)' }}
             >
-              Como trabalhamos.
+              Cómo trabajamos.
             </h2>
           </Reveal>
         </div>
